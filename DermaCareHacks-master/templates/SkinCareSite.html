@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DermaCare</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/SkinCareSite.css') }}" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h2><a href="/"><i></i> DermaCare  </a></h2>
+      <nav>
+      <ul>
+      <li>
+      <a href="/Blog" title="">Blog</a>
+      </li>
+      <li>
+      <a href="/Contact" title="">Contact us</a>
+      </li>
+      <li>
+      <a class="btn" href="/Register" title="Register / Log In">Register/Log In</a>
+      </li>
+      </ul>
+      </nav>
+    </header>
+
+      <div class="cover">
+        <h1>Upload a Picture to Analyze your Skin</h1>
+        <form action="/upload-image" method="POST" enctype="multipart/form-data" id="form1">
+            <input type="file" id="real-file" name="image" hidden="hidden"/>
+            <button type="button" id="custom-button" class="btn"> Choose A File </button>
+            <span id="custom-text"> No file chosen, yet.</span>
+
+        </form>
+
+      <button type="submit" form="form1" id="submitBtn" class="btn"> Submit </button>
+  <!-- <input type="button" onclick="window.location.href='SkinResult.html'; value="SkinREsult"> -->
+        
+    
+  </div>
+  
+  <script type="text/javascript">
+    const readFileBtn = document.getElementById("real-file");
+    const customBtn = document.getElementById("custom-button");
+    const customTxt = document.getElementById("custom-text");
+
+    
+    customBtn.addEventListener("click", function() {
+      readFileBtn.click();
+    });
+
+    readFileBtn.addEventListener("change", function() {
+      if (readFileBtn.value){
+        customTxt.innerHTML = readFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+      }
+      else {
+        customTxt.innerHTML = "No file chosen, Please Try Again.";
+      }
+    });
+  </script>
+</body>
+</html>
