@@ -1,8 +1,7 @@
 # DermaCare
 
-# DermaCare
+# Run the app through a Flask virtual environment:
 
-# To run the app through flask virtual environment follow these steps:
   1) Ensure you are in the DermaCare directory
   2) Run the following commands in your terminal:
   
@@ -24,7 +23,7 @@
       
    Then, open localhost:5000 on your browser to access the website.
 
-# To access through a link copy and paste the following into your browser
+# Run the link in your Chrome browser:
 
 https://ruhacks-277409.nn.r.appspot.com/
 
