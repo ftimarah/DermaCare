@@ -23,7 +23,7 @@
       
    Then, open localhost:5000 on your browser to access the website.
 
-# Run the link in your Chrome browser:
+# Open the link in your Chrome browser:
 
 https://ruhacks-277409.nn.r.appspot.com/
 
