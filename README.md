@@ -1,5 +1,7 @@
 # DermaCare
 
+A demo: https://devpost.com/software/dermacare-tqg0e5
+
 # Run the app through a Flask virtual environment:
 
   1) Ensure you are in the DermaCare directory
